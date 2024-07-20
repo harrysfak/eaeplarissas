@@ -79,10 +79,12 @@ main img {
 
 footer {
     background-color: #b8a16e;
+    margin-top: 2%;;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
     width: 100%;
-    bottom: 0;
+    height: 60px; /* Ύψος του footer */
+    box-sizing: border-box; /* Συμπεριλαμβάνει το padding στο συνολικό ύψος */
+    position: relative; /* Αντικαθιστά το fixed */
 }
