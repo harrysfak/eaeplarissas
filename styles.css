@@ -1,14 +1,173 @@
-/* Βασικές ρυθμίσεις */
+/* variables */
 :root {
-    font-size: 16px; /* 1rem = 16px */
+    --primary: #272932;
+    --seconary: #fdf9ef;
+    --thrirdy:  #fff47d27;;
+    --fourth: #1985A1;
+}
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;}
+/* base styles */
+body {
+    font-family: Fonting;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: var(--primary);
+    color: var(--seconary);
 }
 
+
+/* fonts */
 @font-face {
     font-family: 'Fonting';
     src: url('fonts/fontingdir/fonting.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+/* mobile styles */
+.topnav a:not(:first-child) {
+    display: none;
+}
+.topnav a.icon {
+    float: right;
+    display: block;
+}
+.topnav {
+    overflow: hidden;
+    background-color: var(--primary);
+    background: linear-gradient(to right, var(--primary), var(--thrirdy), var(--primary));
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: var(--seconary);
+    background: linear-gradient(to right, var(--primary), rgba(0, 0, 0, 0.5), var(--primary));
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+} 
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.topnav .icon {
+    display: none;
+}
+
+.topnav  .responsive {
+    position: relative;
+    background-color: var(--primary);
+    background: linear-gradient(to right, var(--primary), var(--thrirdy), var(--primary));   
+}
+.topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    margin: 0 30%;
+}
+
+.megacontainer {
+    position: relative;
+    min-height: 100%;
+    background-color: var(--thrirdy);
+}
+.image-container {
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Τοποθέτηση της εικόνας πίσω από το μενού */
+    overflow: hidden; /* Αποφυγή κύλισης */
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Διατηρεί τη σωστή αναλογία και καλύπτει όλη την οθόνη */
+}
+.img-txt {
+    position: absolute;
+    left: 65%;
+    transform: translate(-40%, 220%);
+    color: var(--primary);
+    font-size: clamp(2em, 8vw, 4em); /* Το μέγεθος του κειμένου είναι πάντα μεταξύ, αλλά αυξάνεται αναλογικά με το πλάτος του παραθύρου */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px white;
+}
+
+.video-container {
+    text-align: center;
+    margin: 20px 0;
+    max-width: 100%; /* Δεν επιτρέπει στο container να ξεπεράσει το 100% του πλάτους */
+    box-sizing: border-box;
+    padding: 10px; /* Προσθέτει padding ώστε να υπάρχει χώρος γύρω από τα videos */
+}
+
+h2{
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column; /* Τα links το ένα κάτω από το άλλο */
+    align-items: center; /* Κεντράρισμα των links */
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px; /* Χώρος ανάμεσα στα links */
+}
+
+.links li {
+    list-style-type: none; /* Αφαίρεση των κουκκίδων από τη λίστα */
+}
+
+.links a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--primary);
+    background-color: var(--fourth);
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid var(--primary); /* Περίγραμμα γύρω από τα links */
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.links a:hover {
+    background-color: var(--primary);
+    color: var(--seconary);
+    transform: scale(1.05); /* Ελαφριά μεγέθυνση κατά το hover */
+}
+
+.links a:active {
+    transform: scale(1); /* Ακύρωση του εφέ κατά το κλικ */
+}
+
+
+
 
 .button {
     display: inline-flex;
@@ -33,185 +192,6 @@
     height: 20px; /* Adjust the size of the icon as needed */
 }
 
-.contact-conteiner{
-    display:flex
-
-}
-
-.contact{
-    align-items: center;
-}
-
-/* Βασικές ρυθμίσεις */
-body {
-    font-family: Fonting;
-    margin: 0;
-    padding: 0;
-    background-color: #eae4e4;
-}
-
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 0.625rem rem;
-}
-
-
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-}
-
-.topnav .icon {
-    display: none;
-}
-
-@media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {
-        display: none;
-    }
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .topnav.responsive {
-        position: relative;
-    }
-    .topnav.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-}
-
-
-
-iframe{
-    display: flex;
-
-
-}
-
-.content {
-    padding-top: 60px; /* Add padding to avoid content being hidden behind the fixed nav bar */
-    padding: 16px;
-}
-
-main {
-    padding: 1.25rem;
-    background-color: white;
-    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
-}
-
-.responsive-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 1.25rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-}
-
-.video-container{
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 1.25rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-
-}
-.image-text {
-    position: relative;
-    display: flex;
-    border: 2px solid #240600;
-    border-radius: 0.625rem;
-    transform: translate(0,-90px);
-    color: rgb(24, 16, 16);
-    text-align: center;
-}
-
-h1, h2 {
-    color: #333;
-}
-
-h1 {
-    font-size: 2rem;
-    margin-bottom: 1.25rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.625rem;
-}
-
-p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-}
-
-.carousel {
-    position: relative;
-    width: 300px;
-    height: 200px;
-}
-
-#carousel-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-#prev-button {
-    left: 0;
-}
-
-#next-button {
-    right: 0;
-}
-
 
 footer {
     background-color: #333;
@@ -225,47 +205,65 @@ footer p {
     margin: 0;
 }
 
-/* Media Queries για Responsive Design */
+.contact-conteiner{
+    display:flex
 
-/* Εφαρμογές για κινητά */
-@media (max-width: 48rem) { /* 768px */
-    .navbar ul {
-        flex-direction: column;
-        align-items: left;
-    }
-
-    .navbar li {
-        margin: 0.625rem 0;
-    }
-
-    .image-text {
-        font-size: 0.9rem;
-        padding: 0.625rem;
-        width: calc(100% - 1.25rem);
-
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
-    ul li {
-        font-size: 0.9rem;
-        padding: 0.5rem;
-        width: 50%;
-    }
 }
 
-/* Εφαρμογές για μεγάλες οθόνες (desktop) */
-@media (min-width: 48rem) { /* 768px */
+.contact{
+    align-items: center;
+}
+/* carousel */
+
+    .carousel {
+        position: relative;
+        width: 300px;
+        height: 200px;
+    }
+
+    #carousel-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    #prev-button {
+        left: 0;
+    }
+
+    #next-button {
+        right: 0;
+    }
+
+
+
+
+
+
+
+
+
+/* small tablet styles */
+@media screen and (min-width: 620px){
+    
+}
+/* large tablets and laptop styles */
+@media screen and (min-width: 960px){
+    
+}
+/* desktop styles */
+@media screen and (min-width: 1200px){
     .image-text {
         font-size: 1.25rem;
         padding: 1rem;
@@ -288,4 +286,5 @@ footer p {
         font-size: 1rem;
         padding: 0.625rem;
     }
-}
+    
+} 
