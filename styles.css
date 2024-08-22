@@ -147,6 +147,12 @@ h4{
     text-align: center;
 }
 
+#section-links{
+    background: linear-gradient(to right bottom, var(--seconary), var(--thrirdy), var(--primary));   
+    border-radius: 10px;
+
+
+}
 
 .links {
     display: flex;
@@ -156,8 +162,6 @@ h4{
     margin: 20px 0;
     padding: 0 0 20px 0;
     gap: 10px; /* Χώρος ανάμεσα στα links */
-    background: linear-gradient(to right bottom, var(--seconary), var(--thrirdy), var(--primary));   
-    border-radius: 10px;
     
 }
 
@@ -188,14 +192,22 @@ h4{
     transform: scale(1); /* Ακύρωση του εφέ κατά το κλικ */
 }
 
+
+.articles{   
+    background: linear-gradient(to right bottom, var(--seconary)5%, var(--thrirdy), var(--primary)150%);  
+    border-radius: 10px;
+
+}
+
 .articles p{
     text-align: justify;
     padding: 10px 45px ;
 
+
 }
 
 .contact-container{
-    background: linear-gradient(to right bottom, var(--seconary), var(--thrirdy), var(--primary));   ;
+    background: linear-gradient(to right bottom, var(--seconary), var(--thrirdy), var(--primary));   
 }
 .contact-container *{
     text-align: center;
@@ -252,7 +264,7 @@ h4{
     text-align: center;
     text-decoration: none;
     color: var(--primary);
-    background-color: var(--thrirdy);
+    background-color: var(--fourth);
     border: 2px solid var(--primary);
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
