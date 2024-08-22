@@ -75,7 +75,7 @@ header {
     display: none;
 }
 
-.topnav  .responsive {
+.topnav .responsive {
     position: relative;
     background-color: var(--primary);
     background: linear-gradient(to right, var(--primary), var(--thrirdy), var(--primary));   
@@ -89,7 +89,6 @@ header {
     float: none;
     display: block;
     text-align: left;
-    margin: 0 30%;
 }
 
 .megacontainer {
@@ -124,11 +123,30 @@ header {
     max-width: 100%; /* Δεν επιτρέπει στο container να ξεπεράσει το 100% του πλάτους */
     box-sizing: border-box;
     padding: 10px; /* Προσθέτει padding ώστε να υπάρχει χώρος γύρω από τα videos */
+    background: linear-gradient(to right bottom, var(--seconary), var(--thrirdy), var(--primary));   
+    border-radius: 10px;
+    
+
+}
+.video_text{
+    font-size: smaller;
+    
 }
 
 h2{
     text-align: center;
+    margin: 50px 100px;
+    border-bottom: 2px solid var(--primary);
 }
+h3{
+    padding: 20px;
+    text-align: center;
+}
+h4{
+    font-size: smaller;
+    text-align: center;
+}
+
 
 .links {
     display: flex;
@@ -136,7 +154,11 @@ h2{
     align-items: center; /* Κεντράρισμα των links */
     justify-content: center;
     margin: 20px 0;
+    padding: 0 0 20px 0;
     gap: 10px; /* Χώρος ανάμεσα στα links */
+    background: linear-gradient(to right bottom, var(--seconary), var(--thrirdy), var(--primary));   
+    border-radius: 10px;
+    
 }
 
 .links li {
@@ -164,6 +186,91 @@ h2{
 
 .links a:active {
     transform: scale(1); /* Ακύρωση του εφέ κατά το κλικ */
+}
+
+.articles p{
+    text-align: justify;
+    padding: 10px 45px ;
+
+}
+
+.contact-container{
+    background: linear-gradient(to right bottom, var(--seconary), var(--thrirdy), var(--primary));   ;
+}
+.contact-container *{
+    text-align: center;
+    padding: 2px;
+
+}
+
+
+/* Στυλ για το container των στοιχείων επικοινωνίας */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Στυλ για τη λίστα επικοινωνίας */
+.contact {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.contact li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--seconary);
+}
+
+/* Στυλ για τις υπο-λίστες (ώρες λειτουργίας) */
+.contact li ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.contact li ul li {
+    padding: 5px 0;
+    border-bottom: none;
+    margin-left: 30%;
+    text-align: left;
+}
+
+/* Στυλ για το κουμπί του χάρτη */
+.contact .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary);
+    background-color: var(--thrirdy);
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.contact .button:hover {
+    background-color: var(--primary);
+    color: var(--seconary);
+    transform: scale(1.05);
+}
+
+.contact .button i {
+    margin-left: 10px;
+}
+
+.contact .button:active {
+    transform: scale(1);
 }
 
 
@@ -264,11 +371,15 @@ footer p {
 }
 /* desktop styles */
 @media screen and (min-width: 1200px){
+
+
+   
     .image-text {
         font-size: 1.25rem;
         padding: 1rem;
         width: calc(100% - 2rem);
     }
+
 
     h1 {
         font-size: 2rem;
