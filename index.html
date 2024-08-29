@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Αρχική Σελίδα</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,26 +39,66 @@
     </header>
       
     <main class="content">
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
+    <button onclick="topFunction()" class="back-to-top" id="backToTopBtn">Πάνω</button>
+    
+
 
       <div class="image-container">
         <p class="img-txt">eaeplarissas.gr</p>
         <img src="img/wallpaper_photo.jpg" class="responsive-image" alt="Κεντρική Φωτογραφία">
       </div> 
 
+      <div class="carousel-megacontainer">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="img/1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                  <img src="img/2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                  <img src="img/1.jpg" class="d-block w-100" alt="...">
+              </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      
+
+
       <div class="video-container">
-        <h2>Youtube Video</h2>
-        <!-- Ενσωμάτωση βίντεο από το YouTube -->
-        <iframe src=https://youtu.be/xpoABO3DMs8?si=DRi17ecseqWs8Rxc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p class="video_text">Αν το βίντεο δεν εμφανίζεται <a href=https://youtu.be/xpoABO3DMs8?si=DRi17ecseqWs8Rxc" target="_blank"> Πατήστε εδώ</a></p>
+          <h2>Youtube Video</h2>
+          <!-- Ενσωμάτωση βίντεο από το YouTube -->
+          <iframe src="https://www.youtube.com/embed/kVjfF6loETA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <noscript>
+              <img src="εναλλακτική-εικόνα.jpg" alt="Εναλλακτική εικόνα αν δεν φορτώνεται το βίντεο">
+          </noscript>
+          <p class="video_text">Αν το βίντεο δεν εμφανίζεται <a href="https://youtu.be/xpoABO3DMs8?si=DRi17ecseqWs8Rxc" target="_blank">Πατήστε εδώ</a></p>
       </div>
 
-         <section class="articles">
+
+      
+
+      <section class="articles">
         <h2>Άρθρα</h2>
         <h3>Η Πρόσκληση του Ιησού Χριστού</h3>
-        <p>Μια Κλήση για Υποδοχή και Εμπιστοσύνη</p>
 
-            <p>Η πρόσκληση του Ιησού Χριστού, όπως καταγράφεται στη Βίβλο, είναι ένα μήνυμα γεμάτο αγάπη και ελπίδα για όλους τους ανθρώπους. Από τα πρώτα βήματα της διακονίας Του μέχρι την εποχή μας, η πρόσκληση του Χριστού παραμένει μια πρόσκληση για αλλαγή, ανανέωση και σωτηρία.
-            <a href="article.html"> Διαβάστε περισσότερα...</a></p>
+        <p>Η πρόσκληση του Ιησού Χριστού, όπως καταγράφεται στη Βίβλο, είναι ένα μήνυμα γεμάτο αγάπη και ελπίδα για όλους τους ανθρώπους. Από τα πρώτα βήματα της διακονίας Του μέχρι την εποχή μας, η πρόσκληση του Χριστού παραμένει μια πρόσκληση για αλλαγή, ανανέωση και σωτηρία.
+        <a href="article.html"> Διαβάστε περισσότερα...</a></p>
             
   
        </section>
@@ -68,30 +109,14 @@
             <li><a href="https://youtube.com/@eaep-larisas?si=tUYe9nX7suMiXjCB" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube Channel</a></li>
             <li><a href="https://www.instagram.com/light_of_the_world_gr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram Page</a></li>
             <li><a href="https://www.radioixalia.gr/" target="_blank"><i class="fa-solid fa-radio"></i> Radio Oixalia</a></li>
-            <li><a href="https://www.christianity.gr/" target="_blank"> <i class="fa-solid fa-radio"></i> Radio Christianity</a></li>
+            <li><a href="https://www.christianity-science.gr/" target="_blank"><i class="fa-solid fa-flask"></i> <i class="fa-solid fa-atom"></i> <i class="fa-brands fa-space-awesome"></i> Χριστιανισμός και Επιστήμη</a></li>
             <li><a href="https://play.google.com/store/apps/details?id=com.sirma.mobile.bible.android&pcampaignid=web_share" target="_blank"><i class="fa-solid fa-cross"></i> Εφαρμογή Αγίας Γραφής</a></li>
             <li><a href="https://play.google.com/store/apps/details?id=com.bible.kids&pcampaignid=web_share" target="_blank"><i class="fa-solid fa-cross"></i> Παιδική Εφαρμογή Αγίας Γραφής</a></li>
-            <li><a href="https://www.alleluia.gr/" target="_blank"><i class="fa-solid fa-paper-plane"></i> alleluia.gr</a></li>
             <li><a href="https://www.ymnologio.com/" target="_blank"><i class="fa-solid fa-book-bible"></i> Υμνολόγιο</a></li>
         </ul>
       </section>
 
-              <!-- <section aria-label="Newest Photos">
-            <div class="carousel" data-carousel>
-              <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
-              <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
-              <ul data-slides>
-                <li class="slide" data-active>
-                  <img src="https://source.unsplash.com/78A265wPiO4" alt="Nature Image #1">
-                </li>
-                <li class="slide">
-                  <img src="https://source.unsplash.com/eOpewngf68w" alt="Nature Image #2">
-                </li>
-                <li class="slide">
-                  <img src="https://source.unsplash.com/ndN00KmbJ1c" alt="Nature Image #3">
-                </li>
-              </ul>
-            </div>-->
+      
     </main>
 
       <footer>
