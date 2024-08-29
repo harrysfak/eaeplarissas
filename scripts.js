@@ -1,37 +1,28 @@
-const totalImages = 2; // Συνολικός αριθμός εικόνων (π.χ. 10 εικόνες από 1.jpg έως 10.jpg)
-let history = [];
-let currentIndex = -1;
+// Μπάρα προόδου σκρολλαρίσματος
+    window.onscroll = function() {
+      scrollFunction();
+      progressBarFunction();
+  };
 
-const carouselImage = document.getElementById('carousel-image');
-const prevButton = document.getElementById('prev-button');
-const nextButton = document.getElementById('next-button');
+  function progressBarFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+  }
 
-// Συνάρτηση για την επιλογή τυχαίας εικόνας
-function getRandomImage() {
-    const randomIndex = Math.floor(Math.random() * totalImages) + 1;
-    return `${randomIndex}.jpg`;
-}
+  // Κουμπί "Πίσω στην Κορυφή"
+  var mybutton = document.getElementById("backToTopBtn");
 
-// Ενημέρωση εικόνας καρουζέλ
-function updateImage(imageSrc) {
-    carouselImage.src = imageSrc;
-}
+  function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+      } else {
+          mybutton.style.display = "none";
+      }
+  }
 
-// Διαχείριση του επόμενου κουμπιού
-nextButton.addEventListener('click', () => {
-    const newImage = getRandomImage();
-    history.push(newImage);
-    currentIndex++;
-    updateImage(newImage);
-});
-
-// Διαχείριση του προηγούμενου κουμπιού
-prevButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateImage(history[currentIndex]);
-    }
-});
-
-// Αρχική εικόνα
-nextButton.click();
+  function topFunction() {
+      document.body.scrollTop = 0; // Για Safari
+      document.documentElement.scrollTop = 0; // Για Chrome, Firefox, IE και Opera
+  }
