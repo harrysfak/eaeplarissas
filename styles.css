@@ -77,7 +77,7 @@ header {
         }
 
         .back-to-top:hover {
-            background-color: var(--thrirdy)
+            background-color: black;
         }
 .topnav a:not(:first-child) {
     display: none;
