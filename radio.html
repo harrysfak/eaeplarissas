@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Αρχική Σελίδα</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="google-site-verification" content="qaimEWSkCzxj3TJsuyKLFKemyR5_9CxQDNShrAwdnlc" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D6VFM6YNMC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-D6VFM6YNMC');
+    </script>
+
+</head>       
+
+<body>
+  <div class="megacontainer">
+    <header>
+        <div class="topnav" id="myTopnav">
+
+          <a href="index.html"><i class="fa-solid fa-house"></i> Αρχική</a>
+          <!--<a href="media.html"><i class="fa-brands fa-youtube"></i> Πολυμέσα</a>-->
+         <!-- <a href="#section-links"><i class="fa-solid fa-link"></i> Διάφοροι Σύνδεσμοι</a>-->
+          <a href="article.html"> <i class="fa-solid fa-file"></i> Άρθρα</a>
+          <!--<a href="news.html"><i class="fa-solid fa-newspaper"></i> Νέα ανακοινώσεις</a>-->
+          <a href="radio.html" target="_blank"><i class="fa-solid fa-radio"></i> Ράδιο Οιχαλία</a>
+          <a href="contact.html"><i class="fa-solid fa-envelope"></i> Επικοινωνία</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i></a>
+        </div>
+    </header>
+      
+    <main class="content">
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    
+    <button onclick="topFunction()" class="back-to-top" id="backToTopBtn"><i class="fa-solid fa-angles-up"></i> </button>
+    
+
+
+      <div class="image-container">
+        <p class="img-txt">eaeplarissas.gr</p>
+        <img src="img/wallpaper_photo.jpg" class="responsive-image" alt="Κεντρική Φωτογραφία">
+      </div> 
+
+      
+      <div class="player">
+        <body>
+            <audio controls="controls" src="https://topstream.gr/radio_oixalia" >
+    </div>
+
+
+        
+      <section id="section-links">
+        <h2>Διάφοροι Σύνδεσμοι</h2>
+        <ul class="links">
+            <li><a href="https://youtube.com/@eaep-larisas?si=tUYe9nX7suMiXjCB" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube Channel</a></li>
+            <li><a href="https://www.instagram.com/light_of_the_world_gr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram Page</a></li>
+            <li><a href="https://www.radioixalia.gr/" target="_blank"><i class="fa-solid fa-radio"></i> Radio Oixalia</a></li>
+            <li><a href="https://www.christianity-science.gr/" target="_blank"><i class="fa-solid fa-flask"></i> <i class="fa-solid fa-atom"></i> <i class="fa-brands fa-space-awesome"></i> Χριστιανισμός και Επιστήμη</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.sirma.mobile.bible.android&pcampaignid=web_share" target="_blank"><i class="fa-solid fa-cross"></i> Εφαρμογή Αγίας Γραφής</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.bible.kids&pcampaignid=web_share" target="_blank"><i class="fa-solid fa-cross"></i> Παιδική Εφαρμογή Αγίας Γραφής</a></li>
+            <li><a href="https://www.ymnologio.com/" target="_blank"><i class="fa-solid fa-book-bible"></i> Υμνολόγιο</a></li>
+        </ul>
+      </section>
+
+      
+    </main>
+
+      <footer>
+          <p>&copy; 2024 Ελευθέρα Αποστολική Εκκλησία Λάρισας.</p>
+      </footer>
+
+      <script src="scripts.js"></script>
+  </div>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
+</body>
+</html>

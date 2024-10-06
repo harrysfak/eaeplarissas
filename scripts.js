@@ -1,4 +1,4 @@
-// Μπάρα προόδου σκρολλαρίσματος
+    // Μπάρα προόδου σκρολλαρίσματος
     window.onscroll = function() {
       scrollFunction();
       progressBarFunction();
@@ -26,3 +26,5 @@
       document.body.scrollTop = 0; // Για Safari
       document.documentElement.scrollTop = 0; // Για Chrome, Firefox, IE και Opera
   }
+
+  
