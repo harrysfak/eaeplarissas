@@ -534,10 +534,60 @@ h4{
     }
 
     .image-text {
-        font-size: 2.6em;
+        font-size: 3em;
         padding: 1rem;
         width: calc(100% - 2rem);
     }
+}
+    /* 1300px και πανω styles */
+@media screen and (min-width: 1400px){
+
+    .topnav {
+        overflow: hidden;
+        background-color: var(--primary);
+        background: linear-gradient(to right, var(--primary), var(--thrirdy), var(--primary));
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .topnav a:not(:first-child) {
+        display: block;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: var(--seconary);
+        background: linear-gradient(to right, var(--primary), rgba(0, 0, 0, 0.5), var(--primary));
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    } 
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav a {
+        float: none;
+        font-size: 1.6em;
+        margin: 0 10px; /* Ελάχιστο κενό μεταξύ των links */
+    }
+    .topnav a.icon {
+        float: right;
+        display: none;
+    }
+
+    .image-text {
+        font-size: 4em;
+        padding: 1rem;
+        width: calc(100% - 2rem);
+    }
+}
 
   
  
@@ -601,5 +651,4 @@ audio::-webkit-media-controls-play-button,
 audio::-webkit-media-controls-volume-slider {
     background-color: #fff;
     border-radius: 50%;
-}
 }
